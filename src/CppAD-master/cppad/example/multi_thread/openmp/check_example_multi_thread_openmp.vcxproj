@@ -1,0 +1,236 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|Win32">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|Win32">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGUID>{CB0D93FC-1E3A-3514-85CE-11DF848AB6C5}</ProjectGUID>
+    <WindowsTargetPlatformVersion>10.0.15063.0</WindowsTargetPlatformVersion>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>Win32</Platform>
+    <ProjectName>check_example_multi_thread_openmp</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+    <PropertyGroup>
+      <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\Carlos brunet\Documents\GitHub\CarND-MPC-Project\src\CppAD-master;C:\Users\Carlos brunet\Documents\GitHub\CarND-MPC-Project\src\CppAD-master\example\multi_thread\openmp\..;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\Carlos brunet\Documents\GitHub\CarND-MPC-Project\src\CppAD-master;C:\Users\Carlos brunet\Documents\GitHub\CarND-MPC-Project\src\CppAD-master\example\multi_thread\openmp\..;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\Carlos brunet\Documents\GitHub\CarND-MPC-Project\src\CppAD-master;C:\Users\Carlos brunet\Documents\GitHub\CarND-MPC-Project\src\CppAD-master\example\multi_thread\openmp\..;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\Carlos brunet\Documents\GitHub\CarND-MPC-Project\src\CppAD-master;C:\Users\Carlos brunet\Documents\GitHub\CarND-MPC-Project\src\CppAD-master\example\multi_thread\openmp\..;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\Carlos brunet\Documents\GitHub\CarND-MPC-Project\src\CppAD-master\example\multi_thread\openmp\CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Building Custom Rule C:/Users/Carlos brunet/Documents/GitHub/CarND-MPC-Project/src/CppAD-master/example/multi_thread/openmp/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" "-HC:/Users/Carlos brunet/Documents/GitHub/CarND-MPC-Project/src/CppAD-master" "-BC:/Users/Carlos brunet/Documents/GitHub/CarND-MPC-Project/src/CppAD-master/cppad" --check-stamp-file "C:/Users/Carlos brunet/Documents/GitHub/CarND-MPC-Project/src/CppAD-master/cppad/example/multi_thread/openmp/CMakeFiles/generate.stamp"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:/Users/Carlos brunet/Documents/GitHub/CarND-MPC-Project/src/CppAD-master/example/multi_thread/openmp/CMakeLists.txt;C:\Users\Carlos brunet\Documents\GitHub\CarND-MPC-Project\src\CppAD-master\example\multi_thread\openmp\CMakeLists.txt;C:\Users\Carlos brunet\Documents\GitHub\CarND-MPC-Project\src\CppAD-master\example\multi_thread\openmp\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Users\Carlos brunet\Documents\GitHub\CarND-MPC-Project\src\CppAD-master\cppad\example\multi_thread\openmp\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Building Custom Rule C:/Users/Carlos brunet/Documents/GitHub/CarND-MPC-Project/src/CppAD-master/example/multi_thread/openmp/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" "-HC:/Users/Carlos brunet/Documents/GitHub/CarND-MPC-Project/src/CppAD-master" "-BC:/Users/Carlos brunet/Documents/GitHub/CarND-MPC-Project/src/CppAD-master/cppad" --check-stamp-file "C:/Users/Carlos brunet/Documents/GitHub/CarND-MPC-Project/src/CppAD-master/cppad/example/multi_thread/openmp/CMakeFiles/generate.stamp"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:/Users/Carlos brunet/Documents/GitHub/CarND-MPC-Project/src/CppAD-master/example/multi_thread/openmp/CMakeLists.txt;C:\Users\Carlos brunet\Documents\GitHub\CarND-MPC-Project\src\CppAD-master\example\multi_thread\openmp\CMakeLists.txt;C:\Users\Carlos brunet\Documents\GitHub\CarND-MPC-Project\src\CppAD-master\example\multi_thread\openmp\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Users\Carlos brunet\Documents\GitHub\CarND-MPC-Project\src\CppAD-master\cppad\example\multi_thread\openmp\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Building Custom Rule C:/Users/Carlos brunet/Documents/GitHub/CarND-MPC-Project/src/CppAD-master/example/multi_thread/openmp/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" "-HC:/Users/Carlos brunet/Documents/GitHub/CarND-MPC-Project/src/CppAD-master" "-BC:/Users/Carlos brunet/Documents/GitHub/CarND-MPC-Project/src/CppAD-master/cppad" --check-stamp-file "C:/Users/Carlos brunet/Documents/GitHub/CarND-MPC-Project/src/CppAD-master/cppad/example/multi_thread/openmp/CMakeFiles/generate.stamp"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:/Users/Carlos brunet/Documents/GitHub/CarND-MPC-Project/src/CppAD-master/example/multi_thread/openmp/CMakeLists.txt;C:\Users\Carlos brunet\Documents\GitHub\CarND-MPC-Project\src\CppAD-master\example\multi_thread\openmp\CMakeLists.txt;C:\Users\Carlos brunet\Documents\GitHub\CarND-MPC-Project\src\CppAD-master\example\multi_thread\openmp\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\Users\Carlos brunet\Documents\GitHub\CarND-MPC-Project\src\CppAD-master\cppad\example\multi_thread\openmp\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Building Custom Rule C:/Users/Carlos brunet/Documents/GitHub/CarND-MPC-Project/src/CppAD-master/example/multi_thread/openmp/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" "-HC:/Users/Carlos brunet/Documents/GitHub/CarND-MPC-Project/src/CppAD-master" "-BC:/Users/Carlos brunet/Documents/GitHub/CarND-MPC-Project/src/CppAD-master/cppad" --check-stamp-file "C:/Users/Carlos brunet/Documents/GitHub/CarND-MPC-Project/src/CppAD-master/cppad/example/multi_thread/openmp/CMakeFiles/generate.stamp"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:/Users/Carlos brunet/Documents/GitHub/CarND-MPC-Project/src/CppAD-master/example/multi_thread/openmp/CMakeLists.txt;C:\Users\Carlos brunet\Documents\GitHub\CarND-MPC-Project\src\CppAD-master\example\multi_thread\openmp\CMakeLists.txt;C:\Users\Carlos brunet\Documents\GitHub\CarND-MPC-Project\src\CppAD-master\example\multi_thread\openmp\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\Users\Carlos brunet\Documents\GitHub\CarND-MPC-Project\src\CppAD-master\cppad\example\multi_thread\openmp\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\Carlos brunet\Documents\GitHub\CarND-MPC-Project\src\CppAD-master\cppad\CMakeFiles\ab26e43e42afad90bf15679b57e32242\check_example_multi_thread_openmp.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'"></Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+Debug\example_multi_thread_openmp.exe simple_ad
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:/Users/Carlos brunet/Documents/GitHub/CarND-MPC-Project/src/CppAD-master/cppad/CMakeFiles/ab26e43e42afad90bf15679b57e32242/check_example_multi_thread_openmp.rule;C:\Users\Carlos brunet\Documents\GitHub\CarND-MPC-Project\src\CppAD-master\cppad\example\multi_thread\openmp\Debug\example_multi_thread_openmp.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Users\Carlos brunet\Documents\GitHub\CarND-MPC-Project\src\CppAD-master\cppad\example\multi_thread\openmp\CMakeFiles\check_example_multi_thread_openmp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"></Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+Release\example_multi_thread_openmp.exe simple_ad
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:/Users/Carlos brunet/Documents/GitHub/CarND-MPC-Project/src/CppAD-master/cppad/CMakeFiles/ab26e43e42afad90bf15679b57e32242/check_example_multi_thread_openmp.rule;C:\Users\Carlos brunet\Documents\GitHub\CarND-MPC-Project\src\CppAD-master\cppad\example\multi_thread\openmp\Release\example_multi_thread_openmp.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Users\Carlos brunet\Documents\GitHub\CarND-MPC-Project\src\CppAD-master\cppad\example\multi_thread\openmp\CMakeFiles\check_example_multi_thread_openmp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'"></Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+MinSizeRel\example_multi_thread_openmp.exe simple_ad
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:/Users/Carlos brunet/Documents/GitHub/CarND-MPC-Project/src/CppAD-master/cppad/CMakeFiles/ab26e43e42afad90bf15679b57e32242/check_example_multi_thread_openmp.rule;C:\Users\Carlos brunet\Documents\GitHub\CarND-MPC-Project\src\CppAD-master\cppad\example\multi_thread\openmp\MinSizeRel\example_multi_thread_openmp.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\Users\Carlos brunet\Documents\GitHub\CarND-MPC-Project\src\CppAD-master\cppad\example\multi_thread\openmp\CMakeFiles\check_example_multi_thread_openmp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'"></Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+RelWithDebInfo\example_multi_thread_openmp.exe simple_ad
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:/Users/Carlos brunet/Documents/GitHub/CarND-MPC-Project/src/CppAD-master/cppad/CMakeFiles/ab26e43e42afad90bf15679b57e32242/check_example_multi_thread_openmp.rule;C:\Users\Carlos brunet\Documents\GitHub\CarND-MPC-Project\src\CppAD-master\cppad\example\multi_thread\openmp\RelWithDebInfo\example_multi_thread_openmp.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\Users\Carlos brunet\Documents\GitHub\CarND-MPC-Project\src\CppAD-master\cppad\example\multi_thread\openmp\CMakeFiles\check_example_multi_thread_openmp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="C:\Users\Carlos brunet\Documents\GitHub\CarND-MPC-Project\src\CppAD-master\cppad\example\multi_thread\openmp\CMakeFiles\check_example_multi_thread_openmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="C:\Users\Carlos brunet\Documents\GitHub\CarND-MPC-Project\src\CppAD-master\cppad\ZERO_CHECK.vcxproj">
+      <Project>{F0F35450-D81F-3CD7-AC5A-A8DEBCA18A0A}</Project>
+      <Name>ZERO_CHECK</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Carlos brunet\Documents\GitHub\CarND-MPC-Project\src\CppAD-master\cppad\example\multi_thread\openmp\example_multi_thread_openmp.vcxproj">
+      <Project>{021F00A2-B2A9-308A-8F95-64D9195D0D5A}</Project>
+      <Name>example_multi_thread_openmp</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

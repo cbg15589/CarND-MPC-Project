@@ -1,0 +1,272 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|Win32">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|Win32">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGUID>{5E394B5F-88F0-309F-A033-5541DB350F9C}</ProjectGUID>
+    <WindowsTargetPlatformVersion>10.0.15063.0</WindowsTargetPlatformVersion>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>Win32</Platform>
+    <ProjectName>check_example</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+    <PropertyGroup>
+      <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\Carlos brunet\Documents\GitHub\CarND-MPC-Project\src\CppAD-master;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\Carlos brunet\Documents\GitHub\CarND-MPC-Project\src\CppAD-master;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\Carlos brunet\Documents\GitHub\CarND-MPC-Project\src\CppAD-master;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\Carlos brunet\Documents\GitHub\CarND-MPC-Project\src\CppAD-master;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\Carlos brunet\Documents\GitHub\CarND-MPC-Project\src\CppAD-master\example\CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Building Custom Rule C:/Users/Carlos brunet/Documents/GitHub/CarND-MPC-Project/src/CppAD-master/example/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" "-HC:/Users/Carlos brunet/Documents/GitHub/CarND-MPC-Project/src/CppAD-master" "-BC:/Users/Carlos brunet/Documents/GitHub/CarND-MPC-Project/src/CppAD-master/cppad" --check-stamp-file "C:/Users/Carlos brunet/Documents/GitHub/CarND-MPC-Project/src/CppAD-master/cppad/example/CMakeFiles/generate.stamp"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:/Users/Carlos brunet/Documents/GitHub/CarND-MPC-Project/src/CppAD-master/example/CMakeLists.txt;C:\Users\Carlos brunet\Documents\GitHub\CarND-MPC-Project\src\CppAD-master\example\CMakeLists.txt;C:\Users\Carlos brunet\Documents\GitHub\CarND-MPC-Project\src\CppAD-master\example\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Users\Carlos brunet\Documents\GitHub\CarND-MPC-Project\src\CppAD-master\cppad\example\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Building Custom Rule C:/Users/Carlos brunet/Documents/GitHub/CarND-MPC-Project/src/CppAD-master/example/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" "-HC:/Users/Carlos brunet/Documents/GitHub/CarND-MPC-Project/src/CppAD-master" "-BC:/Users/Carlos brunet/Documents/GitHub/CarND-MPC-Project/src/CppAD-master/cppad" --check-stamp-file "C:/Users/Carlos brunet/Documents/GitHub/CarND-MPC-Project/src/CppAD-master/cppad/example/CMakeFiles/generate.stamp"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:/Users/Carlos brunet/Documents/GitHub/CarND-MPC-Project/src/CppAD-master/example/CMakeLists.txt;C:\Users\Carlos brunet\Documents\GitHub\CarND-MPC-Project\src\CppAD-master\example\CMakeLists.txt;C:\Users\Carlos brunet\Documents\GitHub\CarND-MPC-Project\src\CppAD-master\example\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Users\Carlos brunet\Documents\GitHub\CarND-MPC-Project\src\CppAD-master\cppad\example\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Building Custom Rule C:/Users/Carlos brunet/Documents/GitHub/CarND-MPC-Project/src/CppAD-master/example/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" "-HC:/Users/Carlos brunet/Documents/GitHub/CarND-MPC-Project/src/CppAD-master" "-BC:/Users/Carlos brunet/Documents/GitHub/CarND-MPC-Project/src/CppAD-master/cppad" --check-stamp-file "C:/Users/Carlos brunet/Documents/GitHub/CarND-MPC-Project/src/CppAD-master/cppad/example/CMakeFiles/generate.stamp"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:/Users/Carlos brunet/Documents/GitHub/CarND-MPC-Project/src/CppAD-master/example/CMakeLists.txt;C:\Users\Carlos brunet\Documents\GitHub\CarND-MPC-Project\src\CppAD-master\example\CMakeLists.txt;C:\Users\Carlos brunet\Documents\GitHub\CarND-MPC-Project\src\CppAD-master\example\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\Users\Carlos brunet\Documents\GitHub\CarND-MPC-Project\src\CppAD-master\cppad\example\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Building Custom Rule C:/Users/Carlos brunet/Documents/GitHub/CarND-MPC-Project/src/CppAD-master/example/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" "-HC:/Users/Carlos brunet/Documents/GitHub/CarND-MPC-Project/src/CppAD-master" "-BC:/Users/Carlos brunet/Documents/GitHub/CarND-MPC-Project/src/CppAD-master/cppad" --check-stamp-file "C:/Users/Carlos brunet/Documents/GitHub/CarND-MPC-Project/src/CppAD-master/cppad/example/CMakeFiles/generate.stamp"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:/Users/Carlos brunet/Documents/GitHub/CarND-MPC-Project/src/CppAD-master/example/CMakeLists.txt;C:\Users\Carlos brunet\Documents\GitHub\CarND-MPC-Project\src\CppAD-master\example\CMakeLists.txt;C:\Users\Carlos brunet\Documents\GitHub\CarND-MPC-Project\src\CppAD-master\example\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\Users\Carlos brunet\Documents\GitHub\CarND-MPC-Project\src\CppAD-master\cppad\example\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\Carlos brunet\Documents\GitHub\CarND-MPC-Project\src\CppAD-master\cppad\CMakeFiles\37f3d476bda7b3d7a428d6130decd380\check_example.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'"></Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+""
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:/Users/Carlos brunet/Documents/GitHub/CarND-MPC-Project/src/CppAD-master/cppad/CMakeFiles/37f3d476bda7b3d7a428d6130decd380/check_example.rule;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Users\Carlos brunet\Documents\GitHub\CarND-MPC-Project\src\CppAD-master\cppad\example\CMakeFiles\check_example</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"></Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+""
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:/Users/Carlos brunet/Documents/GitHub/CarND-MPC-Project/src/CppAD-master/cppad/CMakeFiles/37f3d476bda7b3d7a428d6130decd380/check_example.rule;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Users\Carlos brunet\Documents\GitHub\CarND-MPC-Project\src\CppAD-master\cppad\example\CMakeFiles\check_example</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'"></Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+""
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:/Users/Carlos brunet/Documents/GitHub/CarND-MPC-Project/src/CppAD-master/cppad/CMakeFiles/37f3d476bda7b3d7a428d6130decd380/check_example.rule;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\Users\Carlos brunet\Documents\GitHub\CarND-MPC-Project\src\CppAD-master\cppad\example\CMakeFiles\check_example</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'"></Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+""
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:/Users/Carlos brunet/Documents/GitHub/CarND-MPC-Project/src/CppAD-master/cppad/CMakeFiles/37f3d476bda7b3d7a428d6130decd380/check_example.rule;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\Users\Carlos brunet\Documents\GitHub\CarND-MPC-Project\src\CppAD-master\cppad\example\CMakeFiles\check_example</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="C:\Users\Carlos brunet\Documents\GitHub\CarND-MPC-Project\src\CppAD-master\cppad\example\CMakeFiles\check_example" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="C:\Users\Carlos brunet\Documents\GitHub\CarND-MPC-Project\src\CppAD-master\cppad\ZERO_CHECK.vcxproj">
+      <Project>{F0F35450-D81F-3CD7-AC5A-A8DEBCA18A0A}</Project>
+      <Name>ZERO_CHECK</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Carlos brunet\Documents\GitHub\CarND-MPC-Project\src\CppAD-master\cppad\example\abs_normal\check_example_abs_normal.vcxproj">
+      <Project>{FF10DA8F-DEC0-3D8D-9402-6D82A4837429}</Project>
+      <Name>check_example_abs_normal</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Carlos brunet\Documents\GitHub\CarND-MPC-Project\src\CppAD-master\cppad\example\atomic\check_example_atomic.vcxproj">
+      <Project>{8519D299-DDD2-3F58-9649-9C98EF9F8FAD}</Project>
+      <Name>check_example_atomic</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Carlos brunet\Documents\GitHub\CarND-MPC-Project\src\CppAD-master\cppad\example\deprecated\check_example_deprecated.vcxproj">
+      <Project>{7A217587-D13D-3370-A5DC-A6AD3F0C7F90}</Project>
+      <Name>check_example_deprecated</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Carlos brunet\Documents\GitHub\CarND-MPC-Project\src\CppAD-master\cppad\example\general\check_example_general.vcxproj">
+      <Project>{38FA74DC-5DD0-3E19-94BE-B991636DFF33}</Project>
+      <Name>check_example_general</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Carlos brunet\Documents\GitHub\CarND-MPC-Project\src\CppAD-master\cppad\example\get_started\check_example_get_started.vcxproj">
+      <Project>{64C44DA8-6749-3BC9-B4E8-74B2C604D5F0}</Project>
+      <Name>check_example_get_started</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Carlos brunet\Documents\GitHub\CarND-MPC-Project\src\CppAD-master\cppad\example\ipopt_solve\check_example_ipopt_solve.vcxproj">
+      <Project>{680799D0-A95E-3218-B756-E3AFF5E8C299}</Project>
+      <Name>check_example_ipopt_solve</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Carlos brunet\Documents\GitHub\CarND-MPC-Project\src\CppAD-master\cppad\example\optimize\check_example_optimize.vcxproj">
+      <Project>{AD919058-A5BF-3B35-BA58-5697C92C8764}</Project>
+      <Name>check_example_optimize</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Carlos brunet\Documents\GitHub\CarND-MPC-Project\src\CppAD-master\cppad\example\print_for\check_example_print_for.vcxproj">
+      <Project>{F1BE1FB6-1D53-3BFF-AC17-4ACA7C3F53D5}</Project>
+      <Name>check_example_print_for</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Carlos brunet\Documents\GitHub\CarND-MPC-Project\src\CppAD-master\cppad\example\sparse\check_example_sparse.vcxproj">
+      <Project>{AFAA9D10-BECE-3D7A-AE43-2AC98CC82880}</Project>
+      <Name>check_example_sparse</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Carlos brunet\Documents\GitHub\CarND-MPC-Project\src\CppAD-master\cppad\example\utility\check_example_utility.vcxproj">
+      <Project>{B7FD5690-A3B1-3753-A2C6-B97A824273FC}</Project>
+      <Name>check_example_utility</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

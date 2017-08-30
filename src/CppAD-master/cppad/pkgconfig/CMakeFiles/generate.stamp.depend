@@ -1,0 +1,4 @@
+# CMake generation dependency list for this directory.
+C:/Users/Carlos brunet/Documents/GitHub/CarND-MPC-Project/src/CppAD-master/pkgconfig/CMakeLists.txt
+C:/Users/Carlos brunet/Documents/GitHub/CarND-MPC-Project/src/CppAD-master/pkgconfig/cppad.pc.in
+C:/Users/Carlos brunet/Documents/GitHub/CarND-MPC-Project/src/CppAD-master/pkgconfig/cppad-uninstalled.pc.in
