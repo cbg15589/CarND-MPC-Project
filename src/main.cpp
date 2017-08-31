@@ -103,6 +103,9 @@ int main() {
 					*
 					*/
 
+
+					// Transform waypoints to vehicle coordinatte system
+
 					Eigen::VectorXd ptsx_veh = Eigen::VectorXd(ptsx.size());
 					Eigen::VectorXd ptsy_veh = Eigen::VectorXd(ptsy.size());
 
@@ -115,8 +118,10 @@ int main() {
 						ptsy_veh[i] = (y*cos(psi) - x*sin(psi));
 					}
 
+					// Fir polynomial to waypoints
 					Eigen::VectorXd coeffs = polyfit(ptsx_veh, ptsy_veh, 3);
 
+					// Calculate vehicle current state
 					Eigen::VectorXd state = Eigen::VectorXd(6);
 
 					double cte = polyeval(coeffs, 0);
@@ -124,6 +129,9 @@ int main() {
 					double epsi = -atan(coeffs[1]);
 
 					state << 0, 0, 0, v, cte, epsi;
+
+
+					// Call MPC to solve the optimization problem
 
 					double steer_value;
 					double throttle_value;
@@ -133,6 +141,7 @@ int main() {
 					steer_value = mpc_output[0];
 					throttle_value = mpc_output[1];
 
+					// Store current command values in MPC
 					mpc.current_delta = steer_value;
 					mpc.current_a = throttle_value;
 
