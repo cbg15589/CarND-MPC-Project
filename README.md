@@ -3,6 +3,45 @@ Self-Driving Car Engineer Nanodegree Program
 
 ---
 
+## Introduction
+
+The goal of this project is to create a Model Predictive Controller to drive a vehicle around a track on Udacity's simulator. The simulator provides the desired trajectory and current state of the vehicle, then it expects back commands for both steering and accelerator/brake pedal.
+
+As a high overview of the workflow, we use the trajectory provided by the simulator to fit a third degree polynomial and we pass this and the current state to the MPC. Then, the MPC calculates the optimum trajectory based on a vehicle model and some other constrains (e.g maximum steering angle). The optimum trajectory is based on cost function which we try to minimise, this cost function penalises deviations from the desired trajectory in terms of distance and orientation. Additionally, to make the drive smoother, we penalise also heavy actuator use.
+
+
+## Implementation
+
+ 1.  **Vehicle Model:**
+	 
+The vehicle model,  based on the vehicle's current state (position, orientation and speed) and actuator position (acceleration and steering angle), predicts the state at the next timestep. The model not only predicts the vehicles position orientation and speed but also the cross-track and orientation error. These are used in the cost function.
+
+The model equations as explained in the lessons are:
+
+![Model Equations](img/model.PNG)
+ 
+ 2. **Timestep Number and Duration (N & dt):** 
+ 
+As the MPC calculates a new trajectory every 100 milliseconds, predicting the optimum trajectory for all the waypoints would be a waste of resources. Also, the kinematic model is quite simple and will accumulate error for a long prediction horizon. 
+
+For this reason we only calculate for a few timesteps of predefined duration. The starting project suggested 10 timesteps of 0.1 seconds. After some tuning, I achieved my best results with 10 timesteps of 0.065 seconds. The reasoning behind these values is that the prediction horizon seems to be enough, and the timestep length fits with the latency and calculation time of my setup (0.1s latency + 0.03s optimization = 2*0.065s).
+ 
+ 3. Waypoints Preprocessing and Polynomial Fitting:
+ 
+To simplify the polynomial fitting and further calculations, we preprocess the waypoints received from the simulator and we transform them to a different coordinate system where the vehicle is the origin. This way both coordinates x, y and the orientation are 0 at the first timestep. 
+ 
+ 4. Latency Handling:
+ 
+One of the challenges of the project is to handle the latency present between command and actuation. To simulate this, a fixed delay of 100ms is introduced. We receive the data from the simulator at time t, we finish calculation of the command at t+30ms (average calculation time) and the simulator receives the command at t+130ms. 
+
+To handle this delay we could predict the future state using the model equations before sending it to the MPC, but this would lead to code duplication. A cleaner way of handling it, is via constrains in the optimisation problem, in my case, I fixed the values of the actuators for the two first timesteps to the previous commanded value.
+ 
+ 5. Bonus: Reference Speed Update:
+ 
+To achieved a more realistic driving I wanted the car to brake before the corners. I tried to use the cost function penalise speed based on the orientation, but this will make the vehicle to brake in the middle of the corner, which is undesirable in real life. 
+
+As an alternative, I used the fitted the polynomial to compare the orientation of two points of the desired trajectory, and made the target speed linearly proportional to the orientation difference between this two points. The two points are further ahead of the prediction horizon so that the car brakes before entering the corner. This is a very simple solution, but does the job quite well.
+
 ## Dependencies
 
 * cmake >= 3.5
